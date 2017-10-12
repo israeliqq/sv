@@ -196,7 +196,7 @@
 		                        <tr class="active">
 		                            <th><i class="fa fa-share-alt" aria-hidden="true"></i> FUERZA ORGANO:
 		                            	<div class="col-xs-7 pull-right"> 
-		                            	<input name="fuerzaom" id="total"class="form-control input-sm" id="inputsm" type="number" value="<?php echo ($datos->fuerzaom); ?>" min="0" size="10" style="height:22px">
+		                            	<input name="fuerzaom" id="total"class="form-control input-sm" id="inputsm" type="number" value="<?php echo ($datos->fuerzaom); ?>" min="0" size="12" style="height:22px">
 		                            	</div>
 		                            </th>
 		                            <th class="col-xs-2">CANTIDAD</th>
@@ -207,25 +207,25 @@
 
 		                        <tr>
 		                            <td><b><i class="fa fa-user-times" aria-hidden="true"></i> KIA</b> <small>(Killed in Action)</small></td>
-		                            <td><input name="kia" id="kia"  class="form-control input-sm" type="number" value="<?php echo ($datos->kia);?>" min="0" size="10">
+		                            <td><input name="kia" id="kia"  class="form-control input-sm" type="number" value="<?php echo ($datos->kia);?>" min="0" size="12">
 		                            </td>
 		                            
 		                        </tr>
 		                        <tr>
 		                            <td><b><i class="fa fa-user-times" aria-hidden="true"></i> WIA</b>  <small>(Wounded in Action)</small></td>
-		                            <td><input name="wia" id="wia"  class="form-control input-sm" type="number" value="<?php echo ($datos->wia);?>" min="0" size="10">
+		                            <td><input name="wia" id="wia"  class="form-control input-sm" type="number" value="<?php echo ($datos->wia);?>" min="0" size="12">
 		                            </td>
 		                            
 		                        </tr>
 		                        <tr>
 		                            <td><b><i class="fa fa-user-times" aria-hidden="true"></i> MIA</b>  <small>(Missing in Action)</small></td>
-		                            <td><input name="mia" id="mia" class="form-control input-sm" type="number" value="<?php echo ($datos->mia);?>" min="0" size="10">
+		                            <td><input name="mia" id="mia" class="form-control input-sm" type="number" value="<?php echo ($datos->mia);?>" min="0" size="12">
 		                            </td>
 		                            
 		                        </tr>
 		                        <tr>
 		                            <td><b><i class="fa fa-user-times" aria-hidden="true"></i>  EWP</b>  <small>(Enemy War Prisoner)</small></td>
-		                            <td><input name="ewp" id="ewp"  class="form-control input-sm" type="number" value="<?php echo ($datos->ewp);?>" min="0" size="10">
+		                            <td><input name="ewp" id="ewp"  class="form-control input-sm" type="number" value="<?php echo ($datos->ewp);?>" min="0" size="12">
 		                            </td>
 		                            
 		                        </tr>
@@ -238,7 +238,7 @@
 
 		                        <tr class="active">
 		                            <td ><b><i class="fa fa-user-plus" aria-hidden="true"></i> NUCLEO DE COMPLETACION</b></td>
-		                            <td><input name="completacion" id="nucleo"  class="form-control input-sm" type="number" value="<?php echo ($datos->completacion);?>" min="0" size="10">
+		                            <td><input name="completacion" id="nucleo"  class="form-control input-sm" type="number" value="<?php echo ($datos->completacion);?>" min="0" size="12">
 		                            </td>
 		                        </tr>
 

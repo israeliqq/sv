@@ -28,7 +28,7 @@
     </div>
 
     <div class="col-md-6">
-        <a href="#">
+        <a href="http://192.168.21.200">
             <div class="panel fondoclass">
                 <div class="panel-heading">
                     <div class="row" align="center" style="color:#333333;">

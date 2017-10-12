@@ -104,7 +104,7 @@ var tiempo = 5*60;
 		<div class="panel-group" id="panel-742391">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					 <a class="panel-title" data-toggle="collapse" data-parent="#panel-742391" href="#EXTRAS"><b><i class="fa fa-calculator" aria-hidden="true"></i> ARMAMENTO - MUNICION OPERACIONAL</b></a>
+					 <a class="panel-title" data-toggle="collapse" data-parent="#panel-742391" href="#EXTRAS"><b><i class="fa fa-calculator" aria-hidden="true"></i> ARMAMENTO - MUNICION</b></a>
 					 
 				</div>
 				<div id="EXTRAS" class="panel-collapse collapse">
