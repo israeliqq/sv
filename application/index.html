@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>Cuenta regresiva</title>
+  <script src="//code.jquery.com/jquery.js"></script>
+  <script type="text/javascript">
+  $(function(){
+
+            var numero =parseInt($("#numero").text()),
+                tiempo= setInterval(function(){
+
+				numero=numero-1;
+				$("#numero").text(numero);
+
+					if(numero==0){
+						$("#numero").text("jOSE , DIANA , YARED , JOAQUIN , ?");
+						clearInterval(tiempo);
+					}
+                },1000);
+  });
+  </script>
+</head>
+<body>
+        <h1>CUENTA REGRESIVA</h1>
+        <div  style="margin:0px auto;width:1000px;height:50px;text-align:center"><h1 id="numero">10</h1></div>
+</body>
+</html>

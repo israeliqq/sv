@@ -1,0 +1,29 @@
+table, td {
+    border: 1px solid black;
+    width:100%;
+    font-size: 160%;
+    vertical-align: top;
+}
+
+h1, h2, h3, h4, p ,div, table{
+	font-family: sans-serif; 
+}
+
+p{
+	font-size: 80%;
+}
+
+
+th {
+    font-size: 50%;
+}
+
+
+
+.tab{
+
+	border: 0px solid black;
+	font-size: 150%;
+	line-height: 135px;
+}
+

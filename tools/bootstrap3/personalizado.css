@@ -1,0 +1,27 @@
+.btn:hover {
+    background:#AD8E51;
+    color:#FFFFFF;
+    border:0px;
+}
+
+.btn{
+    background:#D6B777;
+    color:#FFFFFF;
+    border:0px;
+}
+
+.btn:active{
+    background:#D6B777;
+    color:#333333;
+    border:0px;
+}
+
+
+ul.nav li a:hover, ul.nav li a:active {
+    color: #D6B777  !important;
+}
+
+ul.nav li.active a {
+    color: #D6B777 !important;
+    /*color: #anycolor !important;*/
+}
