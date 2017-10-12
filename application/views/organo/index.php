@@ -1,7 +1,7 @@
 
 <script type="text/javascript">
 
-        function Restantes()
+        function calcular()
         {
 
         	var total = parseInt(document.getElementById('total').value);
@@ -10,27 +10,30 @@
         	var mia = parseInt(document.getElementById('mia').value);
         	var ewp = parseInt(document.getElementById('ewp').value);
 
-        	var restante = total - (kia + wia + mia + ewp);
+        	var nucleo = parseInt(document.getElementById('nucleo').value);
+        	var refuerzos = parseInt(document.getElementById('refuerzos').value);
+
+        	var restante = (total + nucleo + refuerzos) - (kia + wia + mia + ewp);
             document.getElementById('restantes').value = restante;
+
+            document.getElementById('total').value = total + nucleo + refuerzos;
 
             if(restante < 0) { ohSnap('<b><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Error de Calculo: No puede haber un personal operativo menor a 0.</b>', {color: 'red'}, {'duration':'10000'}); }
         }
 
-        function Nucleo()
+        function limpiar()
         {
-        	var total = parseInt(document.getElementById('total').value);
-        	var nucleo = parseInt(document.getElementById('nucleo').value);
-        	var suma = total + nucleo;
-            document.getElementById('total').value = suma;
+        	document.getElementById('total').value = "";
+        	document.getElementById('kia').value = "";
+        	document.getElementById('wia').value = "";
+        	document.getElementById('mia').value = "";
+        	document.getElementById('ewp').value = "";
+        	document.getElementById('nucleo').value = "";
+        	document.getElementById('refuerzos').value = "";
+        	document.getElementById('restantes').value = "";
+        	document.getElementById('total').value = "";
         }
 
-        function Refuerzos()
-        {
-        	var total = parseInt(document.getElementById('total').value);
-        	var refuerzos = parseInt(document.getElementById('refuerzos').value);
-        	var suma = total + refuerzos;
-            document.getElementById('total').value = suma;
-        }        
 
         function petroleo()
         {
@@ -188,13 +191,12 @@
 				</div>
 				<div id="FUERZA" class="panel-collapse collapse">
 					<div class="panel-body">
-						<p align="center" style="color:red;"><b>Nota:</b> Para recalcular borre todas las casillas.</p>
 						<table class="table table-hover table-condensed">
 		                    <thead>
 		                        <tr class="active">
 		                            <th><i class="fa fa-share-alt" aria-hidden="true"></i> FUERZA ORGANO:
 		                            	<div class="col-xs-7 pull-right"> 
-		                            	<input name="fuerzaom" id="total" onchange='Restantes();' class="form-control input-sm" id="inputsm" type="number" value="<?php echo ($datos->fuerzaom); ?>" min="0" size="10" style="height:22px">
+		                            	<input name="fuerzaom" id="total"class="form-control input-sm" id="inputsm" type="number" value="<?php echo ($datos->fuerzaom); ?>" min="0" size="10" style="height:22px">
 		                            	</div>
 		                            </th>
 		                            <th class="col-xs-2">CANTIDAD</th>
@@ -205,25 +207,25 @@
 
 		                        <tr>
 		                            <td><b><i class="fa fa-user-times" aria-hidden="true"></i> KIA</b> <small>(Killed in Action)</small></td>
-		                            <td><input name="kia" id="kia" onchange='Restantes();' class="form-control input-sm" type="number" value="<?php echo ($datos->kia);?>" min="0" size="10">
+		                            <td><input name="kia" id="kia"  class="form-control input-sm" type="number" value="<?php echo ($datos->kia);?>" min="0" size="10">
 		                            </td>
 		                            
 		                        </tr>
 		                        <tr>
 		                            <td><b><i class="fa fa-user-times" aria-hidden="true"></i> WIA</b>  <small>(Wounded in Action)</small></td>
-		                            <td><input name="wia" id="wia" onchange='Restantes();' class="form-control input-sm" type="number" value="<?php echo ($datos->wia);?>" min="0" size="10">
+		                            <td><input name="wia" id="wia"  class="form-control input-sm" type="number" value="<?php echo ($datos->wia);?>" min="0" size="10">
 		                            </td>
 		                            
 		                        </tr>
 		                        <tr>
 		                            <td><b><i class="fa fa-user-times" aria-hidden="true"></i> MIA</b>  <small>(Missing in Action)</small></td>
-		                            <td><input name="mia" id="mia"  onchange='Restantes();' class="form-control input-sm" type="number" value="<?php echo ($datos->mia);?>" min="0" size="10">
+		                            <td><input name="mia" id="mia" class="form-control input-sm" type="number" value="<?php echo ($datos->mia);?>" min="0" size="10">
 		                            </td>
 		                            
 		                        </tr>
 		                        <tr>
 		                            <td><b><i class="fa fa-user-times" aria-hidden="true"></i>  EWP</b>  <small>(Enemy War Prisoner)</small></td>
-		                            <td><input name="ewp" id="ewp" onchange='Restantes();' class="form-control input-sm" type="number" value="<?php echo ($datos->ewp);?>" min="0" size="10">
+		                            <td><input name="ewp" id="ewp"  class="form-control input-sm" type="number" value="<?php echo ($datos->ewp);?>" min="0" size="10">
 		                            </td>
 		                            
 		                        </tr>
@@ -236,19 +238,23 @@
 
 		                        <tr class="active">
 		                            <td ><b><i class="fa fa-user-plus" aria-hidden="true"></i> NUCLEO DE COMPLETACION</b></td>
-		                            <td><input name="completacion" id="nucleo"  onchange='Restantes();Nucleo();' class="form-control input-sm" type="number" value="<?php echo ($datos->completacion);?>" min="0" size="10">
+		                            <td><input name="completacion" id="nucleo"  class="form-control input-sm" type="number" value="<?php echo ($datos->completacion);?>" min="0" size="10">
 		                            </td>
 		                        </tr>
 
 		                        <tr class="active">
 		                            <td ><b><i class="fa fa-user-plus" aria-hidden="true"></i> REFUERZOS</b></td>
-		                            <td><input name="reserva" id="refuerzos" onchange='Restantes();Refuerzos();' class="form-control input-sm" type="number" value="<?php echo ($datos->reserva);?>" min="0" size="10">
+		                            <td><input name="reserva" id="refuerzos" class="form-control input-sm" type="number" value="<?php echo ($datos->reserva);?>" min="0" size="10">
 		                            </td>
 		                        </tr>
 
 		                    </tbody>
 		                </table>
-
+		                <div align="center">
+		                	<input value="Calcular" type="button" class="btn btn-xs" onclick="calcular()">
+		                	<input value="Limpiar" type="button" class="btn btn-xs" onclick="limpiar()">
+						</div>
+						<hr>
 
 		                <legend style="font-size: 15px;"><b><i class="fa fa-pencil" aria-hidden="true"></i> OBSERVACIONES</b></legend>
 						<div class="form-group">
