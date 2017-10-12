@@ -40,7 +40,7 @@ class Repo extends CI_Controller {
 						<table class="tab">
 							<tr class="tab">
 								<td width="20%" class="tab" align="center">
-									<img src="'.base_url().'tools/kcfinder/upload/image/ccn2px.png" alt=""/>
+									<img src="'.base_url().'tools/img/ccn2px.png" alt=""/>
 								</td>
 								<td width="80%" class="tab" align="center">
 									<h6>
@@ -242,25 +242,6 @@ class Repo extends CI_Controller {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	public function historico(){
 
 		if($this->session->userdata('organo')){ 
@@ -295,7 +276,7 @@ class Repo extends CI_Controller {
 						<table class="tab">
 							<tr class="tab">
 								<td width="20%" class="tab" align="center">
-									<img src="'.base_url().'tools/kcfinder/upload/image/ccn2px.png" alt=""/>
+									<img src="'.base_url().'tools/img/ccn2px.png" alt=""/>
 								</td>
 								<td width="80%" class="tab" align="center">
 									<h6>
@@ -307,7 +288,7 @@ class Repo extends CI_Controller {
 						<hr>
 
 						<h2 align="center"><u>QUAD CHART '.$org.'</u></h2>
-				   	';
+					';
 				   	
 			$html.='
 				<table>

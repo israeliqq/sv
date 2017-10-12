@@ -104,7 +104,7 @@ var tiempo = 5*60;
 		<div class="panel-group" id="panel-742391">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					 <a class="panel-title" data-toggle="collapse" data-parent="#panel-742391" href="#EXTRAS"><b><i class="fa fa-calculator" aria-hidden="true"></i> ARMAMENTO OPERACIONAL</b></a>
+					 <a class="panel-title" data-toggle="collapse" data-parent="#panel-742391" href="#EXTRAS"><b><i class="fa fa-calculator" aria-hidden="true"></i> ARMAMENTO - MUNICION OPERACIONAL</b></a>
 					 
 				</div>
 				<div id="EXTRAS" class="panel-collapse collapse">
@@ -447,7 +447,7 @@ var myConfig = {
  	scaleY: {
  	  label:{
  	    offsetY: 5,
- 	    text: "PORCENTAJE DE OPERACIONALIDAD",
+ 	    text: "PORCENTAJE OPERACIONAL",
  	    fontColor: "#605f5f",
  	    fontSize: 14,
  	    fontFamily: "sans-serif",
