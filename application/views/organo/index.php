@@ -284,10 +284,10 @@
 						<table class="table   table-hover table-condensed">
 		                    <thead >
 		                        <tr class="active">
-		                            <th class="col-lg-6">ARMAMENTO</th>
-		                            <th class="col-lg-2">CANT. TOTAL </th>
-		                            <th class="col-lg-2">CANT. ACTUAL</th>
-		                            <th class="col-lg-2">NIV. OPER.</th>
+		                            <th class="col-lg-6">ARMAMENTO - MUNICION</th>
+		                            <th class="col-lg-2">C. TOTAL</th>
+		                            <th class="col-lg-2">C. OPER</th>
+		                            <th class="col-lg-2">% OPER</th>
 		                        </tr>
 		                    </thead>
 		                    <tbody>
@@ -335,9 +335,9 @@
 		                      	<thead >
 			                        <tr class="active">
 			                            <th class="col-lg-6">COMBUSTIBLE</th>
-			                            <th class="col-lg-2">LTS.  TOT. </th>
-			                            <th class="col-lg-2">LTS. UTL.</th>
-			                            <th class="col-lg-2">NIVEL DISP.</th>			                            
+			                            <th class="col-lg-2">LTS.  TOTAL </th>
+			                            <th class="col-lg-2">LTS. DISP.</th>
+			                            <th class="col-lg-2">% DISP.</th>			                            
 			                        </tr>
 		                    	</thead>
 		                        <tr>
@@ -351,17 +351,17 @@
 		                            </td>
 		                            <td>
 		                            	<div class="input-group">
-											<input name="diesel" onchange="petroleo();"  class="form-control input-sm" id="diesel" type="number" value="<?php echo ($datos->diesel);?>" placeholder="%" min="0" required>
+											<input name="diesel" onchange="petroleo();"  class="form-control input-sm" id="diesel" type="number" value="<?php echo ($datos->diesel);?>" placeholder="" min="0" required>
 
 											<span class="input-group-addon"><b><i class="fa fa-thermometer-half" aria-hidden="true"></i></b></span>
 										</div>
 		                            </td>
 		                            <td>
 		                            	<div class="input-group">
-											<input name="lvdiesel" onchange="petroleo();" class="form-control input-sm" id="lvdiesel" type="number" value="<?php echo ($datos->lvdiesel);?>" placeholder="%" min="0" required>
+											<input name="lvdiesel" onchange="petroleo();" class="form-control input-sm" id="lvdiesel" type="number" value="<?php echo ($datos->lvdiesel);?>" placeholder="" min="0" required>
 
 											<span class="input-group-addon"><b><i class="fa fa-thermometer-half" aria-hidden="true"></i></b></span>
-										</div>
+										</div >
 		                            </td>
 
 		                            	<?php 
@@ -382,18 +382,18 @@
 		                            		<span class="input-group-addon">
 		                            			<i class="fa fa-car" aria-hidden="true"></i>
 		                            		</span><b>
-											<input class="form-control input-sm" value="GASOLINA" name="nom_gasolina" type="text" readonly></b>
+											<input class="form-control input-sm" value="GASOLINA" name="nom_gasolina" type="text" readonly min="0" size="12" ></b>
 										</div>
 		                            </td>
 		                            <td>
 		                            	<div class="input-group">
-											<input name="gasolina" class="form-control input-sm" id="gasolina" type="number" value="<?php echo ($datos->gasolina);?>" placeholder="%" min="0" size="10" onchange="bencina();" required>
+											<input name="gasolina" class="form-control input-sm" id="gasolina" type="number" value="<?php echo ($datos->gasolina);?>" placeholder="" min="0" size="12" onchange="bencina();" required>
 											<span class="input-group-addon"><b><i class="fa fa-thermometer-half" aria-hidden="true"></i></b></span>
 										</div>
 		                            </td>
 		                            <td>
 		                            	<div class="input-group">
-											<input name="lvgasolina" class="form-control input-sm" id="lvgasolina" type="number" value="<?php echo ($datos->lvgasolina);?>" placeholder="%" min="0" size="10" onchange="bencina();" required>
+											<input name="lvgasolina" class="form-control input-sm" id="lvgasolina" type="number" value="<?php echo ($datos->lvgasolina);?>" placeholder="" min="0" size="12"  onchange="bencina();" required>
 											<span class="input-group-addon"><b><i class="fa fa-thermometer-half" aria-hidden="true"></i></b></span>
 										</div>
 		                            </td>
@@ -405,7 +405,7 @@
 
 		                            <td>
 		                            	<div class="input-group">
-											<input name="pjgasolina" class="form-control input-sm" id="pjgasolina" type="text" value="<?php echo $pjg;?>"  readonly>
+											<input name="pjgasolina" class="form-control input-sm" id="pjgasolina" type="text" value="<?php echo $pjg;?>"  min="0" size="12"  readonly>
 											<span class="input-group-addon"><i class="fa fa-percent" aria-hidden="true"></i></span>
 										</div>
 		                            </td>		                            		                            
@@ -416,18 +416,18 @@
 		                            		<span class="input-group-addon">
 		                            			<i class="fa fa-plane" aria-hidden="true">&nbsp;</i>
 		                            		</span><b>
-											<input class="form-control input-sm" value="AVIACION JP1" name="nom_gasolina" type="text" readonly></b>
+											<input class="form-control input-sm" value="AVIACION JP1" name="nom_gasolina" type="text" readonly min="0" size="12" ></b>
 										</div>
 		                            </td>		                        
 		                            <td>
 		                            	<div class="input-group">
-											<input name="aereo" class="form-control input-sm" id="aereo" type="number" value="<?php echo ($datos->aereo);?>" placeholder="%" min="0" onchange="avion();"  required>
+											<input name="aereo" class="form-control input-sm" id="aereo" type="number" value="<?php echo ($datos->aereo);?>" placeholder="" min="0" size="12"  onchange="avion();"  required>
 											<span class="input-group-addon"><b><i class="fa fa-thermometer-half" aria-hidden="true"></i></b></span>
 										</div>
 		                            </td>
 		                            <td>
 		                            	<div class="input-group">
-											<input name="lvaereo" class="form-control input-sm" id="lvaereo" type="number" value="<?php echo ($datos->lvaereo);?>" placeholder="%" min="0" onchange="avion();" required>
+											<input name="lvaereo" class="form-control input-sm" id="lvaereo" type="number" value="<?php echo ($datos->lvaereo);?>" placeholder="" min="0" size="12"  onchange="avion();" required>
 											<span class="input-group-addon"><b><i class="fa fa-thermometer-half" aria-hidden="true"></i></b></span>
 										</div>
 		                            </td>	

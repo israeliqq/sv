@@ -42,7 +42,7 @@ var tiempo = 5*60;
 					<div id="quad" class="panel-collapse collapse">
 						<div class="panel-body">
 							<div align="right">
-								<a class="btn  btn-block" href="<?php echo base_url();?>consultas/expo?org=<?php echo $org;?>" target="_blank"><i class="fa fa-expand" aria-hidden="true"></i><b> Modo Exposición</b></a>
+								<a class="btn  btn-block" href="<?php echo base_url();?>consultas/expo?org=<?php echo $org;?>" target="_blank"><i class="fa fa-expand" aria-hidden="true"></i><b> Exposición</b></a>
 							</div>
 							<hr>
 							<table class="table table-bordered">
@@ -93,8 +93,6 @@ var tiempo = 5*60;
 					<div id="FUERZA" class="panel-collapse collapse">
 						<div class="panel-body" align="center">
 							<div id='torta'></div>
-							<h4><b>NUCLEO DE COMPLETACION: <?php echo $datos->completacion;?></b></h4>
-							<h4><b>PERSONAL DE REFUERZO: <?php echo $datos->reserva;?></b></h4>
 						</div>
 					</div>
 				</div>
@@ -255,17 +253,17 @@ var myConfig = {
 		{
 		  values: [<?php echo ($mia);?>],
 		  text: 'MIA',
-		  backgroundColor: '#645143'
+		  backgroundColor: '#8f46f4'
 		},
 		{
 		  text: 'EWP',
 		  values: [<?php echo ($ewp);?>],
-		  backgroundColor: '#C0B08C'
+		  backgroundColor: '#0068C4'
 		},
 		{
-		  text: 'P. OPERATIVOS',
+		  text: 'CIDDS',
 		  values: [<?php echo ($restante);?>],
-		  backgroundColor: '#D17905'
+		  backgroundColor: '#66bf00'
 		}
 	]
 };

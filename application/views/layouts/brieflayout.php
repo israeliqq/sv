@@ -154,10 +154,9 @@ function update() {
 
 <footer class="footer">
   <div class="container" align="center">
-    <p style="color:white;"><b>SOFTWARE DE INTEGRACIÓN VISUAL DE INFORMACIÓN OPERACIONAL<br>SIVIO V1.4 - 2017</b></p>
+    <p style="color:white;"><b>SOFTWARE DE INTEGRACIÓN VISUAL DE INFORMACIÓN OPERACIONAL<br>SIVIO V1.9 - 2017</b></p>
   </div>
 </footer>
-
 
 
 

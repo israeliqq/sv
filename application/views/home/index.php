@@ -62,7 +62,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
                     <div class="panel fondoclass">
                         <div class="panel-heading">
                             <div class="row" align="center" style="color:#333333;">
-                                <h4><b> <i class="fa fa-envelope" aria-hidden="true"></i> CORREO CODEN</b></h4>
+                                <h4><b> <i class="fa fa-envelope" aria-hidden="true"></i> ENLACE EXTERNO</b></h4>
                             </div>
                         </div>
                     </div>

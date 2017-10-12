@@ -109,8 +109,8 @@ class Repo extends CI_Controller {
 					  <td align="center">'.$ewp.'</td>
 					</tr>
 					<tr>
-					  <td align="center"><h6>FUERZAS RESTANTES</h6></td>
-					  <td align="center">'.$total.'</td>
+					  <td align="center" style="color:red;"> <h6>CIDDS (Combat ID Dismounted Soldier)</h6></td>
+					  <td align="center" style="color:red;">'.$total.'</td>
 					</tr>
 					<tr>
 					  <td align="center"><h6>REFUERZO</h6></td>
@@ -364,8 +364,8 @@ class Repo extends CI_Controller {
 					  <td align="center">'.$ewp.'</td>
 					</tr>
 					<tr>
-					  <td align="center"><h6>FUERZAS RESTANTES</h6></td>
-					  <td align="center">'.$total.'</td>
+					  <td align="center" style="color:red;"> <h6>CIDDS (Combat ID Dismounted Soldier)</h6></td>
+					  <td align="center" style="color:red;">'.$total.'</td>
 					</tr>
 					<tr>
 					  <td align="center"><h6>REFUERZO</h6></td>

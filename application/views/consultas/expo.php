@@ -39,7 +39,7 @@
 <div class="row">
 <div class="col-md-12" align="center">
         
-<h1 style="color:white"><b>MODO EXPOSICION BRIEFING</b></h1>
+<h1 style="color:white"><b>EXPOSICION BRIEFING</b></h1>
 
 <table class="table table-condensed ">
     <tbody>
