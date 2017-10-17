@@ -126,8 +126,8 @@
 						<div class="col-lg-12">
 								<!-- Nav tabs -->
 								<ul class="nav nav-tabs">
-									<li class="active"><a href="#cuadro1" data-toggle="tab"><b>ULTIMAS 24H</b></a></li>
-									<li><a href="#cuadro2" data-toggle="tab"><b>PROXIMAS 24H</b></a></li>
+									<li class="active"><a href="#cuadro1" data-toggle="tab"><b>ULTIMAS 12/24H</b></a></li>
+									<li><a href="#cuadro2" data-toggle="tab"><b>PROXIMAS 12/24H</b></a></li>
 									<li><a href="#cuadro3" data-toggle="tab"><b>NIVELES</b></a></li>
 									<li><a href="#cuadro4" data-toggle="tab"><b>ESTADO FUERZAS</b></a></li>
 								</ul>

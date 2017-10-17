@@ -49,11 +49,11 @@ var tiempo = 5*60;
 			                    <tbody>
 			                        <tr>
 			                            <td bgcolor="#F5F5F5">
-			                             	<legend><b>RESUMEN ULTIMAS 24 HORAS</b></legend>
+			                             	<legend><b>RESUMEN ULTIMAS 12/24 HORAS</b></legend>
 			                            	<?php echo ($datos->q1);?>
 			                            </td>
 			                            <td bgcolor="#ffffff">
-			                            	<legend><b>PROXIMAS 24 HORAS</b></legend>
+			                            	<legend><b>PROXIMAS 12/24 HORAS</b></legend>
 			                            	<?php echo ($datos->q2);?>	
 			                            </td>
 			                        </tr>
