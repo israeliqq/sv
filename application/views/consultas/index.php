@@ -204,9 +204,13 @@ var tiempo = 5*60;
 
 	$restante = $fuerzaom - $total;
 
-	$diesel = (($datos->diesel - $datos->lvdiesel) * 100)/($datos->diesel); 
-	$gasolina = (($datos->gasolina - $datos->lvgasolina) * 100)/($datos->gasolina); 
-	$aereo = (($datos->aereo - $datos->lvaereo) * 100)/($datos->aereo); 
+	//$diesel = (($datos->diesel - $datos->lvdiesel) * 100)/($datos->diesel); 
+	//$gasolina = (($datos->gasolina - $datos->lvgasolina) * 100)/($datos->gasolina); 
+	//$aereo = (($datos->aereo - $datos->lvaereo) * 100)/($datos->aereo); 
+
+	$diesel = (($datos->lvdiesel) * 100)/($datos->diesel); 
+	$gasolina = (($datos->lvgasolina) * 100)/($datos->gasolina); 
+	$aereo = (($datos->lvaereo) * 100)/($datos->aereo); 
 ?>
 
 <script type="text/javascript">
@@ -275,6 +279,9 @@ zingchart.render({
 	width: 425 
 });
 
+
+
+//BARRAS SITUACION ACTUAL
 var myChart = {
   "type": "bar",
   "plot": {
@@ -328,7 +335,7 @@ zingchart.render({
 	
 
 
-
+//MEDIA TORTA COMBUSTIBLE
 var myConfig = {
   type: "pie",
   backgroundColor: "#ffffff",
@@ -390,7 +397,7 @@ var myConfig = {
 };
 
 zingchart.render({
-  id: 'myChart',
+  id: 'myChart22',
   data: myConfig,
   height: 290,
   width: 525
@@ -398,6 +405,105 @@ zingchart.render({
  
 
 
+//BARRAS COMBUSTIBLE
+var myConfig = {
+  type: "hbar",
+  tooltip:{
+    padding: 10,
+    fontSize: 14,
+    text: "%v% DISPONIBLE",
+    backgroundColor: "#fff",
+    fontColor: "#444",
+    borderRadius: "2px",
+    borderColor: "#333",
+    borderWidth: 1
+  },
+
+
+  plotarea:{
+    margin: "10 220 70 90"
+  },
+  plot:{
+    borderRadius: "0 5 5 0",
+    hightlightMarker: {
+      backgroundColor:"red"
+    },
+    highlightState: {
+      backgroundColor:"red"
+    },
+
+    animation: {
+      delay: 1000,
+      effect: 4,
+      method: 5,
+      sequence: 3,
+      speed: 1000
+    }
+  },
+ 	scaleX: {
+ 	  labels: ['Gasolina','Diesel','Aviacion JP1' ],
+ 	  //labels: ['hola','hola','hola','hola','hola','hola','hola','hola',],
+ 	  item: {
+ 	    fontFamily: "sans-serif",
+ 	    fontSize: 14
+ 	  },
+ 	  lineColor: "#222222",
+ 	  tick:{
+ 	    visible: true
+ 	  }
+ 	},
+ 	scaleY: {
+ 	  label:{
+ 	    offsetY: 5,
+ 	    text: "NIVELES DE COMBUSTIBLE",
+ 	    fontColor: "#605f5f",
+ 	    fontSize: 14,
+ 	    fontFamily: "sans-serif",
+ 	  },
+ 	  item: {
+ 	    // fontColor: "#fff",
+ 	    fontFamily: "sans-serif",
+ 	    fontSize: 14
+ 	  },
+ 	  lineWidth: 0,
+ 	  tick: {
+ 	    visible: false
+ 	  },
+ 	  guide:{
+ 	    lineStyle: "solid",
+ 	    lineColor: "#DDD"
+ 	  },
+ 	  values: "0:100:10"
+ 	},
+	series : [
+	  {
+		  values: [<?php echo round($gasolina,2); ?> , <?php echo round($diesel,2); ?> , <?php echo round($aereo,2); ?> ,],
+		  backgroundColor: "#d6d6d6",
+		  rules: [
+		    { rule: '%i==0', backgroundColor: '#D70206'},
+		    { rule: '%i==1', backgroundColor: '#F4C63D'},
+		    { rule: '%i==2', backgroundColor: '#645143'},
+		  ]
+		}
+	]
+};
+
+zingchart.render({ 
+	id : 'myChart', 
+	data : myConfig, 
+	height: 400, 
+	width: 700 
+});
+
+
+
+
+
+
+
+
+
+//BARRAS ARMAMENTO
 var myConfig = {
   type: "hbar",
   tooltip:{
@@ -469,7 +575,11 @@ var myConfig = {
  	},
 	series : [
 	  {
-		  values: [<?php foreach($armamento as $dato){  echo (($dato->numero - $dato->numero2) * 100)/($dato->numero).",";}?> ],
+		  values: [<?php foreach($armamento as $dato){  
+		  	//echo (($dato->numero - $dato->numero2) * 100)/($dato->numero).",";
+		  	echo round((($dato->numero2) * 100)/($dato->numero),2).",";
+
+		  }?> ],
 		  backgroundColor: "#d6d6d6",
 		  rules: [
 		    { rule: '%i==0', backgroundColor: '#D70206'},
@@ -484,7 +594,6 @@ var myConfig = {
 		}
 	]
 };
-
 
 zingchart.render({ 
 	id : 'armamento', 

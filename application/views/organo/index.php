@@ -39,7 +39,7 @@
         {
         	var total = parseInt(document.getElementById('diesel').value);
         	var cantidad = parseInt(document.getElementById('lvdiesel').value);
-        	var pj = ((total - cantidad) * 100) / (total);
+        	var pj = ((cantidad) * 100) / (total);
             document.getElementById('pjdiesel').value = pj;
         }
 
@@ -47,7 +47,7 @@
         {
         	var total = parseInt(document.getElementById('gasolina').value);
         	var cantidad = parseInt(document.getElementById('lvgasolina').value);
-        	var pj = ((total - cantidad) * 100) / (total);
+        	var pj = ((cantidad) * 100) / (total);
             document.getElementById('pjgasolina').value = pj;
         }        
 
@@ -55,7 +55,8 @@
         {
         	var total = parseInt(document.getElementById('aereo').value);
         	var cantidad = parseInt(document.getElementById('lvaereo').value);
-        	var pj = ((total - cantidad) * 100) / (total);
+        	//var pj = ((total - cantidad) * 100) / (total);
+        	var pj = ((cantidad) * 100) / (total);
             document.getElementById('pjaereo').value = pj;
         }
 
@@ -67,7 +68,8 @@
         {
         	var total = parseInt(document.getElementById('total<?php echo $i;?>').value);
         	var cantidad = parseInt(document.getElementById('cant<?php echo $i;?>').value);
-        	var pj = ((total - cantidad) * 100) / (total);
+        	//var pj = ((total - cantidad) * 100) / (total);
+        	var pj = ((cantidad) * 100) / (total);
             document.getElementById('pj<?php echo $i;?>').value = pj;
         }
 
